@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Edu+NSW+ACT+Foundation&family=Roboto:ital,wght@0,100;1,300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(75, 7, 120);
+}
+
+h1 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* 
+.child-container {
+    width: 50vw;
+    padding: 20px;
+} */
+
+.left,
+.right {
+    margin-top: 20px;
+}
+
+.clock_img img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.timings {
+    background-color: azure;
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    z-index: 0;
+}
+
+.timings::before {
+    content: '';
+    position: absolute;
+    left: 42px;
+    top: 50px;
+    z-index: -1;
+    width: 1px;
+    height: calc(100% - 100px);
+    background-color: gray;
+}
+
+.timings__item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.timings__item+.timings__item {
+    padding-top: 24px;
+}
+
+.timings__item__left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.timings__item__left img {
+    background-color: azure;
+    padding: 10px 0;
+}
+
+
+select {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    width: 200px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #1E90FF;
+    box-shadow: 0px 0px 3px #1E90FF;
+}
+
+select option {
+    font-size: 16px;
+    color: #333;
+}
+
+
+div p {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: blue;
+    font-size: larger;
+}
+
+
+div.timings .line {
+    border: 1px solid rgb(217, 217, 217);
+    width: 0;
+    height: 50px;
+    margin-left: 65px;
+}
+
+.greeting_container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 15px;
+    opacity: 0.4;
+}
+
+/* .alarm-left {
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 60px;
+    width: 250px;
+    background-image: linear-gradient(to right, rgb(116, 116, 225), violet);
+} */
+
+div h3 {
+    margin-left: 5px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 60px;
+    width: 250px;
+    background-image: linear-gradient(to right, rgb(116, 116, 225), violet);
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.alarm {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    gap: 20px;
+    /* border: 2px solid black; */
+    /* height: 250px; */
+}
+
+.alarm-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    flex-grow: 1;
+    opacity: 0.3;
+    /* height: 220px; */
+    margin-top: 20px;
+    /* margin-bottom: 10px; */
+    border-radius: 10px;
+    /* width: 50%; */
+}
+
+/* right container */
+/* styling for overlapped boxes / The clock*/
+.overlap_container {
+    position: relative;
+}
+
+.firstBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    gap: 10px;
+}
+
+#hours {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(234, 174, 234);
+    border-radius: 5px;
+}
+
+#minutes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(234, 174, 234);
+    border-radius: 5px;
+}
+
+#seconds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(234, 174, 234);
+    border-radius: 5px;
+}
+
+#sessions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(145, 14, 145);
+    border-radius: 5px;
+}
+
+.secondBox {
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    bottom: -15px;
+    height: 40px;
+    width: 80%;
+    z-index: 1;
+    opacity: 0.8;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thirdBox {
+    border-radius: 15px;
+    background-color: white;
+    position: absolute;
+    height: 66px;
+    width: 70%;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.2;
+    bottom: -25px;
+}
+
+.breakfast {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: blueviolet;
+    background-color: white;
+    height: 90px;
+    border-radius: 20px;
+    margin-top: 35px;
+}
+
+/* picture */
+.goodmornig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: large;
+}
+
+.goodmornigimg {
+    height: 400px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#setAlarmBtn h2:nth-child(2) {
+    display: none;
+}
+
+#setAlarmBtn:hover h2:nth-child(1) {
+    display: none;
+}
+
+#setAlarmBtn:hover h2:nth-child(2) {
+    display: block;
+}
+
+/* mobile view */
+@media screen and (max-width:720px) {
+    .grid {
+        display: block;
+    }
+
+    .alarm {
+        display: block;
+    }
+
+    .alarm-left button {
+        width: 100%;
+    }
+
+    .overlap_container {
+        margin-top: 30px;
+    }
+
+    .goodmornig {
+        margin-bottom: 20px;
+    }
+
+}
+
+/* tablet view */
+@media only screen and (max-width:900px) and (min-width: 720px) {
+    .grid {
+        display: block;
+    }
+
+    .alarm {
+        display: block;
+    }
+
+    .alarm-left button {
+        width: 100%;
+    }
+
+    .overlap_container {
+        margin-top: 30px;
+    }
+
+    .goodmornig {
+        margin-bottom: 20px;
+    }
+
+}
