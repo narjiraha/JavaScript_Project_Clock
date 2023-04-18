@@ -75,7 +75,7 @@ function displayTime() {
     // Check if the current time is between 6am and 12pm
     if (hrs >= 6 && hrs < 12) {
         // Change the image to the good morning 
-        document.querySelector('.goodmornigimg').src = './image/morning_image.jpg';
+        document.querySelector('.goodmornigimg').src = './image/component.jpg';
     }
 
     // Check if the current time is between 12pm and 4(16)pm
